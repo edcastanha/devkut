@@ -3,17 +3,22 @@ import Box from '../src/components/Box'
 import { AlurakutMenu, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
 import { PerfilRelacoesBoxWrapper } from '../src/components/PerfilRelacoes';
 
-function ProfileSidebar(propriedades) {
-  console.log(propriedades);
+function PerfilSideBar(propriedades) {
   return (
+    <>
     <Box>
-      <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '8px' }} />
+      <img src={`https://github.com/${propriedades.githubUser}.png`} style={{ borderRadius: '10px' }} />
+      <tr></tr>
+      <h2 className="smallTitle">
+      {propriedades.name}
+      </h2>
     </Box>
+    </>
   )
 }
 
 export default function Home() {
-  const usuarioAleatorio = 'edcastanha';
+  const usuario = ['edcastanha','Edson Lourenço'];
   const pessoasFavoritas = [
     'artusrocha',
     'omariosouto',
@@ -27,9 +32,8 @@ export default function Home() {
     <>
       <AlurakutMenu />
       <MainGrid>
-        {/* <Box style="grid-area: profileArea;"> */}
         <div className="perfilArea" style={{ gridArea: 'perfilArea' }}>
-          <ProfileSidebar githubUser={usuarioAleatorio} />
+          <PerfilSideBar githubUser={usuario[0]} name={usuario[1]}/>       
         </div>
         <div className="conteudoArea" style={{ gridArea: 'conteudoArea' }}>
           <Box>
