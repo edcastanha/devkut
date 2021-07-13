@@ -43,6 +43,13 @@ export default function Home() {
 
             <OrkutNostalgicIconSet />
           </Box>
+
+          <Box>
+            <h1 className="title">
+              Postagens 
+            </h1>
+            
+          </Box>
         </div>
         <div className="relacoesArea" style={{ gridArea: 'relacoesArea' }}>
           <PerfilRelacoesBoxWrapper>
